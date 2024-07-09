@@ -1,4 +1,5 @@
 import Header from '@/components/ui/web-components/Header';
+import PageTransition from '@/components/ui/web-components/PageTransition';
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -18,7 +19,8 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={jetbrainsMono.variable}>
         <Header />
-        {children}
+
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
