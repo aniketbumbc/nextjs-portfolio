@@ -2,6 +2,7 @@ import { Button } from '../components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 import SocialIcons from '@/components/ui/web-components/SocialIcons';
 import Photo from '@/components/ui/web-components/Photo';
+import Stats from '@/components/ui/web-components/Stats';
 
 const Home = () => {
   return (
@@ -44,6 +45,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Stats />
     </section>
   );
 };
