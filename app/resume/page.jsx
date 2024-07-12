@@ -40,16 +40,22 @@ const about = {
       filedValue: '+918879989714',
     },
     {
-      filedName: 'Email',
-      filedValue: 'aniket.umbc@gmail.com',
-    },
-    {
-      filedName: 'Work Status',
+      filedName: 'Status',
       filedValue: 'Available for work',
     },
     {
+      filedName: 'Email',
+      filedValue: 'aniket.umbc@gmail.com',
+    },
+
+    {
       filedName: 'Language',
       filedValue: 'English',
+    },
+
+    {
+      filedName: 'Experience',
+      filedValue: '6+ Years',
     },
   ],
 };
@@ -285,7 +291,7 @@ const Resume = () => {
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
                   {about.description}
                 </p>
-                <ul className='grid  max-w-[520px] mx-auto xl:mx-0'>
+                <ul className='grid grid-cols-1 xl:grid-cols-2  gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
                   {about.info.map((item, index) => {
                     return (
                       <li
