@@ -3,7 +3,7 @@
 import { BsArrowDownRight } from 'react-icons/bs';
 import Link from 'next/link';
 
-import { easeIn, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const services = [
   {

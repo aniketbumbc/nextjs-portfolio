@@ -56,7 +56,6 @@ const Work = () => {
 
   const handleSlideChange = (swiper) => {
     const currentIndex = swiper.activeIndex;
-
     setProject(projects[currentIndex]);
   };
 
