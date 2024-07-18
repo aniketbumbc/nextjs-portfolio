@@ -16,19 +16,25 @@ const Home = () => {
               <span className='text-accent'>Aniket Bhavsar</span>
             </h1>
             <p className='max-w-[500px] mb-9 text-white'>
-              I excel at crafting elegant digital experience and I am proficient
-              in various programing language and technologies.
+              I am currently working in the IT industry for more than 7+ years
+              of experiences. I am proficient in various programing language and
+              technologies.
             </p>
             {/*  Button social media  */}
             <div className='flex flex-col xl:flex-row items-center gap-8'>
-              <Button
-                variant='outline'
-                size='lg'
-                className='uppercase flex items-center gap-2 hover:text-primary'
+              <a
+                href='../assets/resume/CV-Aniket-Bhavsar.pdf'
+                download='CV-Aniket-Bhavsar'
               >
-                <span className='text-xl'>Download CV</span>
-                <FiDownload />
-              </Button>
+                <Button
+                  variant='outline'
+                  size='lg'
+                  className='uppercase flex items-center gap-2 hover:text-primary'
+                >
+                  <span className='text-xl'>Download CV</span>
+                  <FiDownload />
+                </Button>
+              </a>
               <div className='mb-8 xl:mb-0'>
                 <SocialIcons
                   containerStyles='flex gap-6'
