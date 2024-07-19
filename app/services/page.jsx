@@ -2,7 +2,6 @@
 
 import { BsArrowDownRight } from 'react-icons/bs';
 import Link from 'next/link';
-
 import { motion } from 'framer-motion';
 
 const services = [
@@ -10,29 +9,30 @@ const services = [
     num: '01',
     title: 'Web Development',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt ducimus atque dolore ullam commodi suscipit totam!',
-    href: '',
+      'Good understanding of creating, building, and maintaining websites and web applications that run online on a browser.',
+    href: 'https://aniketb-designer-developer.netlify.app/code',
   },
   {
     num: '02',
     title: 'UI/UX Design',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt ducimus atque dolore ullam commodi suscipit totam!',
-    href: '',
+      'UI design which are responsible for creating, designing, and organizing interactive elements.',
+    href: 'https://aniketb-designer-developer.netlify.app/portfolio',
   },
   {
     num: '03',
     title: 'Backend development',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt ducimus atque dolore ullam commodi suscipit totam!',
-    href: '',
+      'Good knowledge of backend technologies like Java, NodeJS and Python programming language. Experience in writing APIs, creating libraries.',
+    href:
+      'https://github.com/aniketbumbc?tab=repositories&q=&type=&language=java&sort=',
   },
   {
     num: '04',
-    title: 'SEO',
+    title: 'Native Apps',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt ducimus atque dolore ullam commodi suscipit totam!',
-    href: '',
+      'Experienced and build React Native iOS and Android apps. The framework lets you create an application for various platforms by using the same codebase.',
+    href: 'https://github.com/aniketbumbc/RN-FoodTemplate',
   },
 ];
 
@@ -61,6 +61,7 @@ const Services = () => {
                   <Link
                     href={service.href}
                     className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'
+                    target='_blank'
                   >
                     <BsArrowDownRight className='text-primary text-3xl' />
                   </Link>
