@@ -29,7 +29,7 @@ import { motion } from 'framer-motion';
 const about = {
   title: 'About me',
   description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolor magnam, eveniet quibusdam incidunt libero at eius.',
+    'I love to do marathon, acquiring new skills, swim in the open water, strong believe in the meditation. Fond of traveling and observing different cultures and understanding humans. Spreading more empathy and solving humans problem with the assistance of technology.',
   info: [
     {
       filedName: 'Name',
@@ -55,7 +55,7 @@ const about = {
 
     {
       filedName: 'Experience',
-      filedValue: '6+ Years',
+      filedValue: '7+ Years',
     },
   ],
 };
@@ -64,32 +64,22 @@ const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My Experience',
   description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias iure, obcaecati suscipit nihil officiis nemo voluptas voluptatum.',
+    'Experience in web-based enterprise/saas applications using JavaScript/Type script and JavaScript Framework. Good understanding of Generative AI, LLM models, Function calling along with different features.',
   items: [
     {
-      company: 'Tech Solution Inc.',
-      position: 'Fullstack Developer',
+      company: 'Priceline Technology.',
+      position: 'Software Engineer II',
       duration: '2022-present',
     },
     {
-      company: 'Tech Solution Inc.',
-      position: 'Fullstack Developer',
-      duration: '2022-present',
+      company: 'Here Technologies',
+      position: 'Software Engineer II',
+      duration: '2019-2021',
     },
     {
-      company: 'Tech Solution Inc.',
-      position: 'Fullstack Developer',
-      duration: '2022-present',
-    },
-    {
-      company: 'Tech Solution Inc.',
-      position: 'Fullstack Developer',
-      duration: '2022-present',
-    },
-    {
-      company: 'Tech Solution Inc.',
-      position: 'Fullstack Developer',
-      duration: '2022-present',
+      company: 'GEP private Solution.',
+      position: 'Software Engineer',
+      duration: '2017-2019',
     },
   ],
 };
@@ -98,22 +88,22 @@ const education = {
   icon: '/assets/resume/cap.svg',
   title: 'Education',
   description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias iure, obcaecati suscipit nihil officiis nemo voluptas voluptatum.',
+    'I graduated with Masters of Science in Information Systems from the UMBC. I am currently working in the IT industry for more than 7 years of experiences as Software Engineer.',
   items: [
     {
-      institute: 'Tech Solution Inc.',
-      degree: 'Fullstack Developer',
-      duration: '2022-present',
+      institute: 'UMBC (USA).',
+      degree: 'Mater of Science in Information System.',
+      duration: '2013-2016',
     },
     {
-      institute: 'Tech Solution Inc.',
-      degree: 'Fullstack Developer',
-      duration: '2022-present',
+      institute: 'Mumbai University.',
+      degree: 'Engineering in Computer Science.',
+      duration: '2009-2012',
     },
     {
-      institute: 'Tech Solution Inc.',
-      degree: 'Fullstack Developer',
-      duration: '2022-present',
+      institute: 'Mumbai University.',
+      degree: 'Diploma in Computer Science.',
+      duration: '2006-2009',
     },
   ],
 };
@@ -121,7 +111,7 @@ const education = {
 const skills = {
   title: 'My Skills',
   description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias iure, obcaecati suscipit nihil officiis nemo voluptas voluptatum.',
+    'Looking forward to an opportunity to work with cutting-edge technologies on the challenge and diverse projects.',
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -210,7 +200,9 @@ const Resume = () => {
                           </h3>
                           <div className='flex items-center gap-3'>
                             <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
-                            <p className='text-white/60'>{item.company}</p>
+                            <p className='text-white/60 w-[250px] text-balance'>
+                              {item.company}
+                            </p>
                           </div>
                         </li>
                       );
@@ -234,7 +226,7 @@ const Resume = () => {
                           key={index}
                           className='bg-[#232329] h-[184px] py-6 px-8 rounded-xl flex flex-col justify-center items-center lg:items-start'
                         >
-                          <span className='text-accent'>{item.duration}</span>
+                          {/* <span className='text-accent'>{item.duration}</span> */}
                           <h3 className='max-w-[260px] min-h-[30px] text-center lg:text-left'>
                             {item.degree}
                           </h3>

@@ -31,7 +31,7 @@ const services = [
     num: '04',
     title: 'Native Apps',
     description:
-      'Experienced and build React Native iOS and Android apps. The framework lets you create an application for various platforms by using the same codebase.',
+      'Experienced in building React Native iOS and Android apps. The framework create an application for various platforms by using the same codebase.',
     href: 'https://github.com/aniketbumbc/RN-FoodTemplate',
   },
 ];
