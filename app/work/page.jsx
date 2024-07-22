@@ -29,14 +29,14 @@ const projects = [
   },
   {
     num: '02',
-    category: 'frontend-react',
+    category: 'frontend-responsive',
     title: 'Project-2',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi aperiam minus numquam delectus velit fuga quam quisquam',
+      'Enjoy Delicious home titleSushi Food websites for food ordering purpose. See new menus add and order shushis',
     stack: [{ name: 'Html 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
     image: '/assets/work/thumb2.png',
-    live: '',
-    github: '',
+    live: 'https://aniket-shushi-restro.netlify.app/',
+    github: 'https://github.com/aniketbumbc/shusi-restro-project',
   },
   {
     num: '03',
