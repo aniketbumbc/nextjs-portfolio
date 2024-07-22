@@ -19,13 +19,13 @@ const projects = [
   {
     num: '01',
     category: 'frontend',
-    title: 'Project-1',
+    title: 'Search Your Country',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi aperiam minus numquam delectus velit fuga quam quisquam',
-    stack: [{ name: 'Html 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
+      'Search your country based on region and enter the name on search area. Implementation using search country API.',
+    stack: [{ name: 'React JS' }, { name: 'SCSS' }, { name: 'Javascript' }],
     image: '/assets/work/thumb1.png',
-    live: '',
-    github: '',
+    live: 'https://aniketbumbc.github.io/search-you-country/',
+    github: 'https://github.com/aniketbumbc/search-you-country',
   },
   {
     num: '02',
@@ -92,7 +92,7 @@ const Work = () => {
 
               <div className='border border-white/20'></div>
               <div className='flex items-center gap-4'>
-                <Link href={project.live}>
+                <Link href={project.live} target='_blank'>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
@@ -105,7 +105,7 @@ const Work = () => {
                   </TooltipProvider>
                 </Link>
 
-                <Link href={project.live}>
+                <Link href={project.live} target='_blank'>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
