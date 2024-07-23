@@ -40,13 +40,36 @@ const projects = [
   },
   {
     num: '03',
-    category: 'frontend-angular',
+    category: 'Figma Design',
     title: 'Project-3',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi aperiam minus numquam delectus velit fuga quam quisquam',
-    stack: [{ name: 'Next js' }, { name: 'Node' }, { name: 'Tailwand.css' }],
+      'The sole UX-UI designer for a breakfast online eatery. Implementing wireframes, prototype and design into figma for websites implementation.',
+    stack: [{ name: 'figma' }, { name: 'ux-ui' }, { name: 'wire frame' }],
     image: '/assets/work/thumb3.png',
-    live: '',
+    live: 'https://aniketb-designer-developer.netlify.app/portfolio',
+    github: 'https://www.figma.com/design/1nTLPBDg4MCE6WGSF6phFU/Ecommerce',
+  },
+  {
+    num: '04',
+    category: 'frontend-react',
+    title: 'Project-3',
+    description:
+      'Build ux-ui case study portfolio with react js and animation for websites. ',
+    stack: [{ name: 'Java Script' }, { name: 'React' }, { name: 'SCSS' }],
+    image: '/assets/work/thumb5.png',
+    live: 'https://aniketb-designer-developer.netlify.app/',
+    github: 'https://github.com/aniketbumbc/resume-protfolio',
+  },
+
+  {
+    num: '05',
+    category: 'Figma',
+    title: 'Reno Renovation',
+    description:
+      'Design in iteration base which covers wireframe, user flow, site maps, user flow and prototype.',
+    stack: [{ name: 'Figma' }, { name: 'Wireframe' }, { name: 'Prototype' }],
+    image: '/assets/work/thumb6.png',
+    live: 'https://aniketb-designer-developer.netlify.app/portfolio',
     github: '',
   },
 ];
@@ -159,3 +182,8 @@ const Work = () => {
 };
 
 export default Work;
+
+//https://github.com/aniketbumbc/openai-chat
+//https://github.com/aniketbumbc/Cypress-End-to-End
+//https://github.com/aniketbumbc/Springboot-API
+//https://github.com/aniketbumbc/resume-protfolio
