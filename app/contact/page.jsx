@@ -75,8 +75,9 @@ const Contact = () => {
             <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'>
               <h3 className='text-4xl text-accent'>Let's work together</h3>
               <p className='text-white/60'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Suscipit hic quis accusantium culpa amet.
+                I'm quietly confident, naturally curious, good learner, and
+                perpetually working on improving my chops one design problem at
+                a time.
               </p>
               {/* input */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -109,7 +110,7 @@ const Contact = () => {
                   }
                 />
               </div>
-              <Select onChange={onSelectChange}>
+              {/* <Select onChange={onSelectChange}>
                 <SelectTrigger className='w-full'>
                   <SelectValue placeholder='Select a service' />
                 </SelectTrigger>
@@ -122,7 +123,7 @@ const Contact = () => {
                     <SelectItem value='vst'>Node JS Development</SelectItem>
                   </SelectGroup>
                 </SelectContent>
-              </Select>
+              </Select> */}
 
               {/* Text area */}
 
