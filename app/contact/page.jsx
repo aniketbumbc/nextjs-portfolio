@@ -4,17 +4,8 @@ import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Textarea } from '../../components/ui/textarea';
 import { toast, ToastContainer } from 'react-toast';
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from '../../components/ui/select';
 import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
@@ -39,35 +30,8 @@ const info = [
 
 const Contact = () => {
   const form = useRef();
-
-  const tempEmailData = {
-    fname: '',
-    lname: '',
-    email: '',
-    phone: '',
-    selectedService: '',
-    textAreaText: '',
-  };
-
-  const [mailData, setMailData] = useState(tempEmailData);
-
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(form);
-    console.log('send Email');
-    console.log(mailData);
-    const name = mailData.fname + ' ' + mailData.lname;
-    const phone = mailData.phone;
-    const message = mailData.textAreaText + ' ' + phone;
-    const emailSend = mailData.email;
-
-    const formData = {
-      to_name: 'Aniket',
-      from_name: name,
-      message: message,
-      reply_to: emailSend,
-    };
-
     emailjs
       .sendForm('service_9qkhkdc', 'template_4kieui5', form.current, {
         publicKey: 'gNNUemprIfu64Tll9',
@@ -119,24 +83,18 @@ const Contact = () => {
                 <Input
                   type='name'
                   placeholder='Enter Your Name'
-                  name='to_name'
+                  name='from_name'
                 />
 
                 <Input
                   type='email'
                   placeholder='Email Address'
                   name='reply_to'
-                  onChange={(e) =>
-                    setMailData({ ...mailData, email: e.target.value })
-                  }
                 />
                 <Input
                   type='Phone'
                   placeholder='Whats App Number'
                   name='message'
-                  onChange={(e) =>
-                    setMailData({ ...mailData, phone: e.target.value })
-                  }
                 />
               </div>
               {/* <Select onChange={onSelectChange}>
@@ -160,9 +118,6 @@ const Contact = () => {
                 className='h-[200px]'
                 placeholder='Type your message here'
                 name='message'
-                onChange={(e) => {
-                  setMailData({ ...mailData, textAreaText: e.target.value });
-                }}
               />
               <Button size='md' className='max-w-40 h-10' type='submit'>
                 Send message
