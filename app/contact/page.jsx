@@ -3,6 +3,7 @@
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Textarea } from '../../components/ui/textarea';
+import { toast, ToastContainer } from 'react-toast';
 import {
   Select,
   SelectContent,
@@ -13,8 +14,9 @@ import {
   SelectValue,
 } from '../../components/ui/select';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const info = [
   {
@@ -36,6 +38,8 @@ const info = [
 ];
 
 const Contact = () => {
+  const form = useRef();
+
   const tempEmailData = {
     fname: '',
     lname: '',
@@ -48,15 +52,41 @@ const Contact = () => {
   const [mailData, setMailData] = useState(tempEmailData);
 
   const sendEmail = (e) => {
-    console.log(e);
     e.preventDefault();
+    console.log(form);
     console.log('send Email');
     console.log(mailData);
-  };
+    const name = mailData.fname + ' ' + mailData.lname;
+    const phone = mailData.phone;
+    const message = mailData.textAreaText + ' ' + phone;
+    const emailSend = mailData.email;
 
-  const onSelectChange = (e) => {
-    console.log(e);
-    setMailData({ ...mailData, selectedService: e.target.value });
+    const formData = {
+      to_name: 'Aniket',
+      from_name: name,
+      message: message,
+      reply_to: emailSend,
+    };
+
+    emailjs
+      .sendForm('service_9qkhkdc', 'template_4kieui5', form.current, {
+        publicKey: 'gNNUemprIfu64Tll9',
+      })
+      .then(
+        (data) => {
+          if (data?.status === 200) {
+            toast.success('Email successfully send.', {
+              backgroundColor: '#00ff99',
+              color: 'rgb(28 28 34)',
+            });
+            form.current.reset();
+          }
+        },
+        (error) => {
+          toast.error('Oops! Something went wrong.');
+          console.error(error);
+        }
+      );
   };
 
   return (
@@ -68,11 +98,16 @@ const Contact = () => {
       }}
       className='py-6'
     >
+      <ToastContainer />
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-[30px]'>
           {/* form section */}
           <div className='xl:w-[54%] order-2 xl:order-none'>
-            <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'>
+            <form
+              className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <h3 className='text-4xl text-accent'>Let's work together</h3>
               <p className='text-white/60'>
                 I'm quietly confident, naturally curious, good learner, and
@@ -82,29 +117,23 @@ const Contact = () => {
               {/* input */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <Input
-                  type='fname'
-                  placeholder='First Name'
-                  onChange={(e) =>
-                    setMailData({ ...mailData, fname: e.target.value })
-                  }
+                  type='name'
+                  placeholder='Enter Your Name'
+                  name='to_name'
                 />
-                <Input
-                  type='lname'
-                  placeholder='Last Name'
-                  onChange={(e) =>
-                    setMailData({ ...mailData, lname: e.target.value })
-                  }
-                />
+
                 <Input
                   type='email'
                   placeholder='Email Address'
+                  name='reply_to'
                   onChange={(e) =>
                     setMailData({ ...mailData, email: e.target.value })
                   }
                 />
                 <Input
                   type='Phone'
-                  placeholder='Phone Number'
+                  placeholder='Whats App Number'
+                  name='message'
                   onChange={(e) =>
                     setMailData({ ...mailData, phone: e.target.value })
                   }
@@ -130,11 +159,12 @@ const Contact = () => {
               <Textarea
                 className='h-[200px]'
                 placeholder='Type your message here'
+                name='message'
                 onChange={(e) => {
                   setMailData({ ...mailData, textAreaText: e.target.value });
                 }}
               />
-              <Button size='md' className='max-w-40 h-10' onClick={sendEmail}>
+              <Button size='md' className='max-w-40 h-10' type='submit'>
                 Send message
               </Button>
             </form>
