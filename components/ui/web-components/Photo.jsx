@@ -39,7 +39,7 @@ const Photo = () => {
           fill='transparent'
           viewBox='0 0 506 506'
         >
-          <motion.circle
+          {/* <motion.circle
             cx='253'
             cy='253'
             r='250'
@@ -57,7 +57,7 @@ const Photo = () => {
               repeat: Infinity,
               repeatType: 'reverse',
             }}
-          />
+          /> */}
         </motion.svg>
       </motion.div>
     </div>
