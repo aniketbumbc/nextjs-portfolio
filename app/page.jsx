@@ -12,8 +12,7 @@ const Home = () => {
           <div className='text-center xl:text-left order-2 xl:order-none'>
             <span> Fullstack Software Engineer</span>
             <h1 className='h1 mb-6'>
-              Hello I'm <br />{' '}
-              <span className='text-accent'>Aniket Bhavsar</span>
+              Hi I'm <br /> <span className='text-accent'>Aniket Bhavsar</span>
             </h1>
             <p className='max-w-[500px] mb-9 text-white'>
               I am currently working in the IT industry for more than 7+ years
